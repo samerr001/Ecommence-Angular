@@ -1,0 +1,14 @@
+<div class="row">
+
+  <div *ngFor="let i of prodArray" class="card col" style="width: 18rem;">
+    <img class="card-img-top" src={{i.img}} alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{i.nompdt}}</h5>
+      <p class="card-text"> Price : {{i.prixpdt}}</p>
+      <button (click)="addtoCart($event,i)" class="btn btn-primary">add to cart</button>
+      <button (click)="delete($event, i)" class="btn btn-danger">Delete</button>
+      <a href="#" class="btn btn-warning">edit</a>
+    </div>
+  </div>
+  
+</div>

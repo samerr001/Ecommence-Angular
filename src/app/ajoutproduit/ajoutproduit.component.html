@@ -1,0 +1,43 @@
+<div class="container">
+  <h1>Add product</h1>
+    <form [formGroup] = "formProduct" (ngSubmit)="onClickSubmit(formProduct.value)">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label>Name</label>
+          <input type="text" class="form-control" name="nompdt" formControlName="nompdt">
+        </div>
+        <div class="form-group col-md-6">
+          <label >Type</label>
+          <input type="text" class="form-control" name="typepdt" formControlName="typepdt">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label>Color</label>
+          <input type="text" class="form-control" name="couleurpdt" formControlName="couleurpdt">
+        </div>
+        <div class="form-group col-md-6">
+          <label>Reference</label>
+          <input type="text" class="form-control" name="referencepdt" formControlName="referencepdt">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label>Price</label>
+          <input type="number" class="form-control" name="prixpdt" formControlName="prixpdt">
+        </div>
+        <div class="form-group col-md-6">
+          <label>Quantity</label>
+          <input type="number" class="form-control" name="quantitepdt" formControlName="quantitepdt">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label>Image</label>
+          <input type="text" class="form-control" name="img" formControlName="img">
+        </div>
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+  </div>

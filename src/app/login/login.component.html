@@ -1,0 +1,58 @@
+<H1>Login!</H1>
+<div class="container">
+  <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+  <div>
+    username : <input type="text" name="username" [(ngModel)]="username">
+    password : <input type="password" name="password" [(ngModel)]="password">
+
+    <button (click)=handleLogin() class="btn btn-success">login</button>
+  </div>
+</div>
+
+<div class="container">
+<h1>Sign up</h1>
+  <form [formGroup] = "formUser" (ngSubmit)="onClickSubmit(formUser.value)">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label>Username</label>
+        <input type="text" class="form-control" name="username" formControlName="username">
+      </div>
+      <div class="form-group col-md-6">
+        <label >Family Name</label>
+        <input type="text" class="form-control" name="familyName" formControlName="familyName">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label>Password</label>
+        <input type="password" class="form-control" name="inputPassword" formControlName="inputPassword">
+      </div>
+      <div class="form-group col-md-6">
+        <label>Confirm Password</label>
+        <input type="password" class="form-control" name="inputconfirmPassword" formControlName="confirmPassword">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label>Email</label>
+        <input type="email" class="form-control" name="inputEmail" formControlName="email">
+      </div>
+      <div class="form-group col-md-6">
+        <label>Adress</label>
+        <input type="text" class="form-control" name="inputAdress" formControlName="address">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label>Tel</label>
+        <input type="number" class="form-control" name="inputTel" formControlName="tel">
+      </div>
+      <div class="form-group col-md-6">
+        <label>Cin</label>
+        <input type="number" class="form-control" name="inputCin" formControlName="cin">
+      </div>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+  </form>
+</div>
